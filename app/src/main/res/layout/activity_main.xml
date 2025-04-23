@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Math.PL"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/btn_liniowe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Równanie Liniowe"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_kwadratowe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Równanie Kwadratowe"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_logarytmiczne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Równanie Logarytmowe"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_uklad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Układ Równań"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Liniowe Form -->
+        <LinearLayout
+            android:id="@+id/form_liniowe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/input_a"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="A"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x +"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/input_b"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="B"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="= 0"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Kwadratowe Form -->
+        <LinearLayout
+            android:id="@+id/form_kwadratowe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/input_ka"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:hint="a"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x² +"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"/>
+
+            <EditText
+                android:id="@+id/input_kb"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:hint="b"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x +"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"/>
+
+            <EditText
+                android:id="@+id/input_kc"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:hint="c"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="= 0"
+                android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+        <!-- Logarytmiczne Form -->
+        <LinearLayout
+            android:id="@+id/form_logarytmiczne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="log"
+                android:textSize="18sp"
+                android:layout_marginEnd="4dp"/>
+
+            <EditText
+                android:id="@+id/input_log_a"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:hint="a"
+                android:inputType="numberDecimal"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="("
+                android:textSize="18sp"
+                android:layout_marginEnd="4dp"/>
+
+            <EditText
+                android:id="@+id/input_log_b"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:hint="b"
+                android:inputType="numberDecimal"
+                android:layout_marginEnd="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=")"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <!-- Układ Form -->
+        <LinearLayout
+            android:id="@+id/form_uklad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/input_u_a1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="a1"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x +"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <EditText
+                    android:id="@+id/input_u_b1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="b1"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="y ="
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <EditText
+                    android:id="@+id/input_u_c1"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="c1"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/input_u_a2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="a2"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x +"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <EditText
+                    android:id="@+id/input_u_b2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="b2"
+                    android:inputType="numberDecimal"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="y ="
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+                <EditText
+                    android:id="@+id/input_u_c2"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:hint="c2"
+                    android:inputType="numberDecimal"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_solve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rozwiąż"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/text_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginBottom="24dp"/>
+
+    </LinearLayout>
+</ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!-- Converted React code to Android XML layout with buttons and input fields for each equation type -->
